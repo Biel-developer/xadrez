@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lichess.org • Free Online Chess</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    
+
+    <header>
+        <nav class="navbar">
+            <div class="text-logo">
+                <h1>Lichess.<span>org</span></h1>
+            </div>
+            <div class="menu-navbar">
+                <ul>
+                    <li><a href="#">Jogar</a></li>
+                    <li><a href="#">Quebra-Cabeças</a></li>
+                    <li><a href="#">Aprender</a></li>
+                    <li><a href="#">Assistir</a></li>
+                    <li><a href="#">Comunidade</a></li>
+                    <li><a class="Ferramentas" href="#">Ferramentas</a></li>
+                </ul>
+            </div>
+            <div class="info-navbar">
+                <div class="search">
+                    <i class="ri-search-line"></i>
+                </div>
+                <div class="text">
+                    <h3>Entrar</h3>
+                </div>
+                <div class="settings">
+                    <i class="ri-settings-2-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+   <main class="element-main">
+    <div class="sections">
+        <div class="card1"></div>
+
+        <div class="card2"></div>
+
+        <div class="card3"></div>
+    </div>
+    <div class="xadrez">
+        <div class="element-X"></div>
+        <div class="element-Y"></div>
+    </div>
+   </main>
+
+   <script>
+   let body = document.querySelector('body'); 
+    let xadrez = document.querySelector('.xadrez'); 
+    let array = [];
+    let i;
+
+    for (i = 0; i <= 10; i++) {
+    let novoXadrez = xadrez.cloneNode(true); 
+    novoXadrez.querySelector('.element-X').textContent = i; 
+    novoXadrez.querySelector('.element-Y').textContent = i; 
+    array.push(novoXadrez); 
+    body.appendChild(novoXadrez); 
+    }
+   </script>
+
+</body>
+</html>
